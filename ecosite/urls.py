@@ -18,4 +18,5 @@ urlpatterns = [
     path('api/quit/', views.quit, name='quit'),
     path('api/signup/', SignupApiView.as_view()),
     path('api/signin/', SigninService.as_view()),
+    path('api/bottles_found/', views.bottles_found, name='bottles_found')
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

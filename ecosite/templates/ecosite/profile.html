@@ -8,7 +8,6 @@
 {% endblock %}
 
 {% block content %}
-
 <main>
     <div class="container">
         <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
@@ -62,24 +61,25 @@
             <h3>{{ email }}</h3>
           </div>
           <div class="card-body">
-            <p class="mb-0"><strong class="pr-1">Город заданий:</strong>Алматы</p>
+            <p class="mb-0"><strong class="pr-1">Город заданий: </strong>Алматы</p>
           </div>
         </div>
       </div>
       <div class="col-lg-8">
         <div class="card shadow-sm">
-          <div class="card-header bg-transparent border-0">
-            <h3 class="mb-0"><i class="far fa-clone pr-1"></i> <br>Бутылок собрано за сегодня: </h3>
-          </div>
-          <div class="card-body pt-0">
-            <table class="table table-bordered">
-            </table>
-          </div>
+            <div class="card-header bg-transparent border-0">
+                <h3 class="mb-0"><i class="far fa-clone pr-1"></i> <br>Бутылок собрано: </h3>
+                <h2 class="mb-0">{{ bottles }}</h2>
+            </div>
+
+            <div class="text-center">
+                <button class="w-25 btn btn-lg btn-primary m-5 text-center" onclick="bottles_found()">
+                    Нашел бутылку
+                </button>
+            </div>
         </div>
+
       </div>
-      <h3>
-        Button for bottles
-      </h3>
     </div>
   </div>
 </div>
@@ -87,4 +87,9 @@
 		</div>
     </div>
 </section>
+{% endblock %}
+
+{% block custom_scripts %}
+<script type="text/javascript" src="../static/js/auth/quit.js"></script>
+<script type="text/javascript" src="../static/js/bottles_found.js"></script>
 {% endblock %}
